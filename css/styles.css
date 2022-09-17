@@ -364,7 +364,7 @@ button {
 .work-description__item {
   margin-right: 30px;
 }
-.work-description__item:last-child {
+.work-description__item--margin-0 {
   margin-right: 0px;
 }
 .work-description__item--bigger {
@@ -458,7 +458,7 @@ button {
   border-radius: 0px 0px 4px 4px;
   line-height: 1.17;
 }
-.team__item:last-child {
+.team__item--margin-right-0 {
   margin-right: 0px;
 }
 .team__name {
@@ -490,7 +490,7 @@ button {
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team__social-icon-div svg {
+.team__social-icon-div .team__social-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team__social-icon-div:hover .team__social-icon,
@@ -507,7 +507,7 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team__icon-social-link:focus .team__social-icon-div svg {
+.team__icon-social-link:focus .team__social-icon-div .team__social-icon {
   fill: var(--white);
 }
 .team__icon-social-link:focus .team__social-icon-div {
@@ -540,8 +540,8 @@ button {
 .clients__bg-and-border svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients__bg-and-border:hover svg,
-.clients__bg-and-border:focus svg {
+.clients__bg-and-border:hover .team__social-icon,
+.clients__bg-and-border:focus .team__social-icon {
   color: var(--blue);
   fill: #2196f3;
 }
@@ -555,7 +555,7 @@ button {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients__link:focus .clients__bg-and-border svg {
+.clients__link:focus .clients__bg-and-border .team__social-icon {
   color: var(--blue);
   fill: #2196f3;
 }
@@ -599,7 +599,7 @@ button {
 .portfolio-nav__item {
   margin-right: 8px;
 }
-.portfolio-nav__item:last-child {
+.portfolio-nav__item--margin-right-0 {
   margin-right: 0px;
 }
 .portfolio__list {
@@ -707,7 +707,7 @@ button {
 .modal__container {
   padding: 40px;
 }
-.modal__container p {
+.modal__instruction {
   display: block;
   margin-bottom: 12px;
   font-weight: 700;
@@ -727,9 +727,7 @@ button {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
-.modal__label[type="input"] {
-  outline: none;
-}
+
 .modal__input {
   display: block;
   height: 40px;
@@ -742,7 +740,7 @@ button {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
 }
-.modal__container textarea {
+.modal__textarea {
   width: 448px;
   height: 120px;
   resize: none;
@@ -762,7 +760,7 @@ button {
   width: 16px;
   height: 15px;
 }
-.modal__container button {
+.modal__btn {
   padding: 10px 76px;
   text-align: center;
   background: #2196f3;
@@ -773,7 +771,7 @@ button {
   width: 200px;
   height: 50px;
 }
-.modal__btn {
+.modal__btn-div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -818,10 +816,10 @@ button {
   justify-content: center;
   align-items: center;
 }
-.modal__check-div input {
+.modal__checkbox {
   margin-right: 8px;
   cursor: pointer;
 }
-.modal__check-div a {
+.modal__check-link {
   color: #2196f3;
 }
