@@ -150,6 +150,11 @@ button {
   height: 16px;
   padding-top: 5px;
 }
+.header-contact__icon--mail {
+  width: 16px;
+  height: 12px;
+  fill: var(--lightgray);
+}
 
 /* footer */
 .page-footer {
