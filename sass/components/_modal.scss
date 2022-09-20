@@ -119,8 +119,7 @@
     height: 50px;
     &-div {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      @include center;
       margin-top: 30px;
     }
   }
@@ -131,8 +130,7 @@
   }
   &__check-div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
   }
   &__check-link {
     color: #2196f3;

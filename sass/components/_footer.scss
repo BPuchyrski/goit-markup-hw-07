@@ -75,8 +75,7 @@
 .footer__icon {
   fill: $white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
 }
 .footer__socials-div {
   padding: 12px;
@@ -100,8 +99,7 @@
 .footer__sign-up {
   margin-left: 65px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
 }
 .footer__label-sign-up {
   display: block;
