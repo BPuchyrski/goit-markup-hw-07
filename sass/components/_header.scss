@@ -2,6 +2,7 @@
   border-bottom: 1px solid #ececec;
   text-align: center;
 }
+
 .header-container {
   display: flex;
   align-items: center;
@@ -25,45 +26,48 @@
     }
   }
 }
-.header-nav__link {
-  text-decoration: none;
-  color: $gray;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.header-nav {
+  &__link {
+    text-decoration: none;
+    color: $gray;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    color: $blue;
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+    &--active {
+      position: relative;
+      color: $blue;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -33px;
+        border-bottom: 4px solid $blue;
+        border-radius: 2px;
+        width: 100%;
+      }
+    }
   }
-  &--active {
-    position: relative;
-    color: $blue;
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+  &__item {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 1.14;
+    margin-right: 46px;
 
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: -33px;
-      border-bottom: 4px solid $blue;
-      border-radius: 2px;
-      width: 100%;
+    &--margin-right-0 {
+      margin-right: 0px;
     }
   }
 }
-.header-nav__list {
-  list-style: none;
-  display: flex;
-}
-.header-nav__item {
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  line-height: 1.14;
-  margin-right: 46px;
 
-  &--margin-right-0 {
-    margin-right: 0px;
-  }
-}
 .header-contact {
   margin-left: auto;
 
@@ -81,36 +85,36 @@
       margin-left: 50px;
     }
   }
-}
-.header-contact__link {
-  text-decoration: none;
-  color: $lightgray;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  .header-contact__icon {
+  &__link {
     text-decoration: none;
     color: $lightgray;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &:hover,
-  &:focus {
-    color: $blue;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     .header-contact__icon {
-      fill: $blue;
+      text-decoration: none;
+      color: $lightgray;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover,
+    &:focus {
+      color: $blue;
+
+      .header-contact__icon {
+        fill: $blue;
+      }
     }
   }
-}
-.header-contact__icon {
-  &--smartphone {
-    width: 10px;
-    height: 16px;
-    padding-top: 5px;
-  }
-  &--mail {
-    width: 16px;
-    height: 12px;
-    fill: $lightgray;
+  &__icon {
+    &--smartphone {
+      width: 10px;
+      height: 16px;
+      padding-top: 5px;
+    }
+    &--mail {
+      width: 16px;
+      height: 12px;
+      fill: $lightgray;
+    }
   }
 }
