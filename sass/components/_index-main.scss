@@ -46,79 +46,81 @@
 }
 .work {
   background-color: $white;
-}
-.work-description__list {
-  display: flex;
-  font-size: 14px;
-  color: $lightgray;
-  letter-spacing: 0.03em;
-  list-style: none;
-  line-height: 1.71;
-  padding-left: 0px;
-}
-.work-description__item {
-  margin-right: 30px;
-  &--margin-0 {
-    margin-right: 0px;
+  &-photos {
+    background-color: #e5e5e5;
   }
-  &--bigger {
-    color: $gray;
+  &-h2 {
     font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+    color: $gray;
+    text-align: center;
+    margin-top: 94px;
+    margin-bottom: 50px;
+    line-height: 1.17;
+  }
+}
+.work-description {
+  &__list {
+    display: flex;
+    font-size: 14px;
+    color: $lightgray;
+    letter-spacing: 0.03em;
+    list-style: none;
+    line-height: 1.71;
+    padding-left: 0px;
+  }
+  &__item {
+    margin-right: 30px;
+    &--margin-0 {
+      margin-right: 0px;
+    }
+    &--bigger {
+      color: $gray;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+  }
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+  &__icon-div {
+    background-color: rgba(245, 244, 250, 1);
+    display: inline-block;
+    padding: 25px 100px 25px 100px;
+    margin-bottom: 30px;
+  }
+  &--position {
+    position: relative;
+  }
+  &__title {
+    background-color: #2f303acc;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: $white;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    margin-top: 0px;
-    margin-bottom: 10px;
+    line-height: 1.14;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  &__photos {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    min-width: 1200px;
   }
 }
-.work-description__icon {
-  width: 70px;
-  height: 70px;
-}
-.work-description__icon-div {
-  background-color: rgba(245, 244, 250, 1);
-  display: inline-block;
-  padding: 25px 100px 25px 100px;
-  margin-bottom: 30px;
-}
-.work-description--position {
-  position: relative;
-}
-.work-description__title {
-  background-color: #2f303acc;
-  text-align: center;
-  font-weight: 700;
-  font-size: 14px;
-  color: $white;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  line-height: 1.14;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 
-.work-photos {
-  background-color: #e5e5e5;
-}
-.work-h2 {
-  font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 0.03em;
-  color: $gray;
-  text-align: center;
-  margin-top: 94px;
-  margin-bottom: 50px;
-  line-height: 1.17;
-}
-.work-description__photos {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 30px;
-  min-width: 1200px;
-}
 .team {
   background-color: #f5f4fa;
   &__header {
@@ -163,50 +165,51 @@
     color: $gray;
     line-height: 1.17;
   }
-}
-.team__social-icon {
-  fill: rgba(175, 177, 184, 1);
-  &-list {
-    display: flex;
-    padding-left: 32px;
-    padding-right: 32px;
-    justify-content: space-between;
-    margin-top: 16px;
-    list-style: none;
-  }
-}
-.team__social-icon-div {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  @include center;
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &__social-icon {
+    fill: rgba(175, 177, 184, 1);
+    &-list {
+      display: flex;
+      padding-left: 32px;
+      padding-right: 32px;
+      justify-content: space-between;
+      margin-top: 16px;
+      list-style: none;
+    }
+    &-div {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      @include center;
+      border-radius: 50%;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .team__social-icon {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      .team__social-icon {
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      &:hover .team__social-icon,
+      &:focus .team__social-icon {
+        fill: #fff;
+      }
+      &:hover,
+      &:focus {
+        background-color: #2196f3;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
   }
-  &:hover .team__social-icon,
-  &:focus .team__social-icon {
-    fill: #fff;
-  }
-  &:hover,
-  &:focus {
-    background-color: #2196f3;
-    border-radius: 50%;
-    cursor: pointer;
+  &__icon-social-link {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus .team__social-icon-div .team__social-icon {
+      fill: $white;
+    }
+    &:focus .team__social-icon-div {
+      background-color: #2196f3;
+    }
   }
 }
-.team__icon-social-link {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:focus .team__social-icon-div .team__social-icon {
-    fill: $white;
-  }
-  &:focus .team__social-icon-div {
-    background-color: #2196f3;
-  }
-}
+
 .clients {
   &__header {
     font-weight: 700;
@@ -221,39 +224,39 @@
     justify-content: space-between;
     list-style: none;
   }
-}
-.clients__bg-and-border {
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  display: flex;
-  @include center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  & svg {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &__bg-and-border {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    display: flex;
+    @include center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    & svg {
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover,
+    &:focus {
+      border: 1px solid $blue;
+      cursor: pointer;
+    }
+    &:hover .team__social-icon,
+    &:focus .team__social-icon {
+      color: $blue;
+      fill: #2196f3;
+    }
   }
-  &:hover,
-  &:focus {
-    border: 1px solid $blue;
-    cursor: pointer;
-  }
-  &:hover .team__social-icon,
-  &:focus .team__social-icon {
-    color: $blue;
-    fill: #2196f3;
-  }
-}
-.clients__link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:focus .clients__bg-and-border .team__social-icon {
-    color: $blue;
-    fill: #2196f3;
-  }
-  &:focus .clients__bg-and-border {
-    border: 1px solid $blue;
+  &__link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus .clients__bg-and-border .team__social-icon {
+      color: $blue;
+      fill: #2196f3;
+    }
+    &:focus .clients__bg-and-border {
+      border: 1px solid $blue;
+    }
   }
 }
